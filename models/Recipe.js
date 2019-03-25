@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const RecipeSchema = new Schema({
@@ -9,7 +9,7 @@ const RecipeSchema = new Schema({
   category: {
     type: String,
     required: true
-  }, 
+  },
   description: {
     type: String,
     required: true
@@ -22,12 +22,13 @@ const RecipeSchema = new Schema({
     type: Date,
     default: Date.now
   },
-  likes: { Number,
-  default: 0
+  likes: {
+    type: Number,
+    default: 0
   },
   username: {
-    String
+    type: String
   }
 });
 
-module.exports = mongoose.model('Recipe', RecipeSchema);
+module.exports = mongoose.model("Recipe", RecipeSchema);
